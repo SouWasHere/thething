@@ -8,7 +8,14 @@ from flask import Flask, Response, jsonify, render_template_string
 
 app = Flask(__name__)
 
-VIDEO_PATH = "1.mp4"
+import os
+import urllib.request
+
+VIDEO_URL = "https://your-video-link.mp4"
+VIDEO_PATH = "flood.mp4"
+
+if not os.path.exists(VIDEO_PATH):
+    urllib.request.urlretrieve(VIDEO_URL, VIDEO_PATH)
 FRAME_RATE = 30
 
 latest_frame = None
