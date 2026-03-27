@@ -17,7 +17,7 @@ VIDEO_PATH = "flood.mp4"
 
 if not os.path.exists(VIDEO_PATH):
     urllib.request.urlretrieve(VIDEO_URL, VIDEO_PATH)
-FRAME_RATE = 30
+FRAME_RATE = 10
 
 latest_frame = None
 frame_lock = threading.Lock()
