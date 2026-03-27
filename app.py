@@ -421,3 +421,7 @@ if __name__ == "__main__":
     threading.Thread(target=sim_thread,   daemon=True).start()
     print("[BahaAlerto] Starting server at http://localhost:5000")
     app.run(host="0.0.0.0", port=5000, debug=False, threaded=True)
+
+@app.route("/")
+def dashboard():
+    return render_template_string(DASHBOARD_HTML)
