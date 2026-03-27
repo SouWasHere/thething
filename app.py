@@ -12,7 +12,7 @@ import urllib.request
 app = Flask(__name__)
 
 
-VIDEO_URL = "https://your-video-link.mp4"
+VIDEO_URL = "https://drive.google.com/file/d/1pnNRXewNNaApkDcRYHqGONEFysOCGpGH/view?usp=sharing"
 VIDEO_PATH = "flood.mp4"
 
 if not os.path.exists(VIDEO_PATH):
